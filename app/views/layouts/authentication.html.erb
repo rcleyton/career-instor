@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Autenticação</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'authentication' %>
+  </head>
+
+  <body class="login">
+    <%= yield %>
+
+    <%= javascript_include_tag 'authentication' %>
+  </body>
+</html>
