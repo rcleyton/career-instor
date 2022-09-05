@@ -1,1 +1,79 @@
-<h1>HOME DASHBOARD MAIN</h1>
+<div class="page-title">
+  <div class="title_left">
+    <h3>Gerenciar vagas</h3>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="">
+      <div class="x_content">
+        <div class="row">
+          <%= link_to new_dashboard_vacancy_path do %>
+            <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-paper-plane"></i>
+                </div>
+                <div class="count">
+                  +
+                </div>
+                <h3>Cadastrar vaga</h3>
+              </div>
+            </div>
+          <% end %>
+        
+          <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="tile-stats">
+              <div class="icon"><i class="fa fa-suitcase"></i>
+              </div>
+              <div class="count">
+                <%= total_vacancies %>
+              </div>
+              <h3>Vagas publicadas</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-title">
+  <div class="title_left">
+    <h3>Vagas publicadas</h3>
+  </div>
+</div>
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="x_panel">
+    <div class="x_title">
+      <h2>Clique no título da vaga <small>para editar ou deletar</small></h2>
+      
+      <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Título</th>
+            <th>Publicado em</th>
+            <th>Modelo de trabalho</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @vacancies.each do |v| %>
+            <tr>
+              <td><%= v.title %></td>
+              <td><%= link_to v.title, dashboard_vacancy_path(v) %></td>
+              <td><%= l v.created_at, format: :long %></td>
+              <td><%= v.work_model %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
