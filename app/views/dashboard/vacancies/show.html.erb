@@ -3,7 +3,7 @@
     <div class="x_panel">
 
     <div class="x_content">
-      <span class="section">Informações da vaga</span>
+      <span class="section">Código da vaga: <%= @vacancy.code %></span>
     </div>
 
     <dl class="row">
@@ -18,7 +18,7 @@
       <dt class="col-sm-3">Habilidades desejadas:</dt>
         <dd class="col-sm-9"><%= @vacancy.desired_skills %></dd>
       <dt class="col-sm-3">Salário:</dt>
-        <dd class="col-sm-9"><%= @vacancy.salary_range %></dd>
+        <dd class="col-sm-9"><%= number_to_currency @vacancy.salary_range %></dd>
       <dt class="col-sm-3">Benefícios:</dt>
         <dd class="col-sm-9"><%= @vacancy.benefits %></dd>
       <dt class="col-sm-3">Local da vaga:</dt>

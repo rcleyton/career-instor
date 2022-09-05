@@ -66,7 +66,7 @@
         <tbody>
           <% @vacancies.each do |v| %>
             <tr>
-              <td><%= v.title %></td>
+              <td><%= v.code %></td>
               <td><%= link_to v.title, dashboard_vacancy_path(v) %></td>
               <td><%= l v.created_at, format: :long %></td>
               <td><%= v.work_model %></td>
