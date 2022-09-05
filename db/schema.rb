@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_03_031407) do
+ActiveRecord::Schema.define(version: 2022_09_04_222053) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,21 @@ ActiveRecord::Schema.define(version: 2022_09_03_031407) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "vacancies", force: :cascade do |t|
+    t.string "title"
+    t.string "vacancy_level"
+    t.string "description"
+    t.text "requirements"
+    t.text "desired_skills"
+    t.decimal "salary_range", precision: 8, scale: 2
+    t.text "benefits"
+    t.string "vacancy_location"
+    t.string "work_model"
+    t.string "working_day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

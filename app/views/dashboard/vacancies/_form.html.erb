@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>Criar nova vaga</h2>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+        <span class="section">Informações da vaga</span>
+          <%= simple_form_for @vacancy, url: dashboard_vacancies_path,
+              wrapper: :horizontal_form,
+              wrapper_mappings: {
+              boolean:       :horizontal_boolean,
+              check_boxes:   :horizontal_collection,
+              date:          :horizontal_multi_select,
+              datetime:      :horizontal_multi_select,
+              file:          :horizontal_file,
+              radio_buttons: :horizontal_collection,
+              range:         :horizontal_range,
+              time:          :horizontal_multi_select,
+              select:        :horizontal_select,
+            } do |f| %>
+            <%= f.error_notification %>
+            <%= f.input :title %>
+            <%= f.input :vacancy_level %>
+            <%= f.input :description %>
+            <%= f.input :requirements %>
+            <%= f.input :desired_skills %>
+            <%= f.input :salary_range %>
+            <%= f.input :benefits %>
+            <%= f.input :vacancy_location %>
+            <%= f.input :work_model %>
+            <%= f.input :working_day %>
+
+            <div class="ln_solid"></div>
+            <div class="form-group">
+              <div class="col-md-6 col-md-offset-3">
+                <%= f.button :submit, class:"btn btn-success" %>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
