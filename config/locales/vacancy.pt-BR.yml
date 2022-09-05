@@ -1,0 +1,17 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      vacancy: Vaga
+    attributes:
+      vacancy:
+        title: Título
+        description: Descrição
+        requirements: Requisitos
+        desired_skills: Habilidades desejadas
+        salary_range: Salário
+        vacancy_level: Nível
+        vacancy_location: Localização
+        benefits: Benefícios
+        work_model: Modelo de trabalho
+        working_day: Jornada de Trabalho
