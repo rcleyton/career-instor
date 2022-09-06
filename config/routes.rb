@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: "vacancies#index"
+  root to: "home#index"
 
   namespace :dashboard do
     get "home/index"
