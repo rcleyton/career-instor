@@ -20,6 +20,19 @@ class Dashboard::VacanciesController < DashboardController
     end
   end
 
+  def edit
+    @vacancy = Vacancy.find(params[:id])
+  end
+
+  def update
+    @vacancy = Vacancy.find(params[:id])
+    if @vacancy.update(vacancies_params)
+      redirect_to dashboard_vacancy_path(@vacancy)
+    else 
+      render :edit
+    end
+  end
+
   private
   def vacancies_params
     params.require(:vacancy).permit(:title, :vacancy_level, :description, :requirements,

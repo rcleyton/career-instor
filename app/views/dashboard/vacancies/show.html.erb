@@ -2,32 +2,38 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
 
-    <div class="x_content">
-      <span class="section">Código da vaga: <%= @vacancy.code %></span>
-    </div>
+      <div class="x_content">
+        <span class="section">Código da vaga: <%= @vacancy.code %></span>
+      </div>
 
-    <dl class="row">
-      <dt class="col-sm-3">Título:</dt>
-        <dd class="col-sm-9"><%= @vacancy.title %></dd>
-      <dt class="col-sm-3">Nível da vaga:</dt>
-        <dd class="col-sm-9"><%= @vacancy.vacancy_level %></dd>
-      <dt class="col-sm-3">Descrição:</dt>
-        <dd class="col-sm-9"><%= @vacancy.description %></dd>
-      <dt class="col-sm-3">Requisitos:</dt>
-        <dd class="col-sm-9"><%= @vacancy.requirements %></dd>
-      <dt class="col-sm-3">Habilidades desejadas:</dt>
-        <dd class="col-sm-9"><%= @vacancy.desired_skills %></dd>
-      <dt class="col-sm-3">Salário:</dt>
-        <dd class="col-sm-9"><%= number_to_currency @vacancy.salary_range %></dd>
-      <dt class="col-sm-3">Benefícios:</dt>
-        <dd class="col-sm-9"><%= @vacancy.benefits %></dd>
-      <dt class="col-sm-3">Local da vaga:</dt>
-        <dd class="col-sm-9"><%= @vacancy.vacancy_location %></dd>
-      <dt class="col-sm-3">Modelo de trabalho:</dt>
-        <dd class="col-sm-9"><%= @vacancy.work_model %></dd>
-      <dt class="col-sm-3">Jornada de trabalho:</dt>
-        <dd class="col-sm-9"><%= @vacancy.working_day %></dd>
-    </dl>
+        <dl class="row">
+          <dt class="col-sm-3">Título:</dt>
+            <dd class="col-sm-9"><%= @vacancy.title %></dd>
+          <dt class="col-sm-3">Nível da vaga:</dt>
+            <dd class="col-sm-9"><%= @vacancy.vacancy_level %></dd>
+          <dt class="col-sm-3">Descrição:</dt>
+            <dd class="col-sm-9"><%= @vacancy.description %></dd>
+          <dt class="col-sm-3">Requisitos:</dt>
+            <dd class="col-sm-9"><%= @vacancy.requirements %></dd>
+          <dt class="col-sm-3">Habilidades desejadas:</dt>
+            <dd class="col-sm-9"><%= @vacancy.desired_skills %></dd>
+          <dt class="col-sm-3">Salário:</dt>
+            <dd class="col-sm-9"><%= number_to_currency @vacancy.salary_range %></dd>
+          <dt class="col-sm-3">Benefícios:</dt>
+            <dd class="col-sm-9"><%= @vacancy.benefits %></dd>
+          <dt class="col-sm-3">Local da vaga:</dt>
+            <dd class="col-sm-9"><%= @vacancy.vacancy_location %></dd>
+          <dt class="col-sm-3">Modelo de trabalho:</dt>
+            <dd class="col-sm-9"><%= @vacancy.work_model %></dd>
+          <dt class="col-sm-3">Jornada de trabalho:</dt>
+            <dd class="col-sm-9"><%= @vacancy.working_day %></dd>
+        </dl>
+            <div class="ln_solid"></div>
+            <div class="form-group">
+              <div class="col-md-6 col-md-offset-3">
+                <%= link_to "Editar", edit_dashboard_vacancy_path(@vacancy), class:"btn btn-success" %>
+              </div>
+            </div>
 
     </div>
   </div>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   namespace :dashboard do
     get "home/index"
-    resources :vacancies, only: %i[ index show new create  ]
+    resources :vacancies
   end
 
   devise_for :users
