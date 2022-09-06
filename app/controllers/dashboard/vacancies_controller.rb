@@ -33,6 +33,12 @@ class Dashboard::VacanciesController < DashboardController
     end
   end
 
+  def destroy
+    @vacancy = Vacancy.find(params[:id])
+    @vacancy.destroy
+    redirect_to dashboard_home_index_path
+  end
+
   private
   def vacancies_params
     params.require(:vacancy).permit(:title, :vacancy_level, :description, :requirements,

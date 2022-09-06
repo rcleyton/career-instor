@@ -7,7 +7,6 @@
       </div>
       <div class="x_content">
         <span class="section">Informações da vaga</span>
-          <%# <%= simple_form_for @vacancy, url: dashboard_vacancies_path, %>
           <%= simple_form_for @vacancy, 
           url: (@vacancy.new_record? ? dashboard_vacancies_path : dashboard_vacancy_path),
               wrapper: :horizontal_form,
