@@ -2,9 +2,7 @@
   <div class="container">
     <a class="navbar-brand" href="/">
       <%= image_tag("logo.png") %>
-
     </a>
-
     <button class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -14,8 +12,6 @@
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-
   </div>
 </nav>
 
@@ -28,21 +24,25 @@
 			<div class="col-lg-6 mx-auto">
 				<p class="lead mb-4 text-white">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
 				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-					<button type="button" class="btn btn-primary btn-lg px-4 gap-3">Ver Vagas</button>
+					<button type="button" class="btn btn-primary btn-lg px-4 gap-3 btn-hero">Ver Vagas</button>
 				</div>
 			</div>
 		</div>
   </div>
 </div>
 
-<div class="container-fluid search">
-	<div class="input-group container srch">
-		<%= text_field_tag :q, nil, placeholder: "Buscar por nome, descrição ou código da vaga", class: "form-control" %>
-		<div class="input-group-btn">
-			<%= submit_tag 'Pesquisar', class: "btn btn-success form-control-lg" %>
+<div class="container ">
+	<div class="row height d-flex justify-content-center align-items-center">
+		<div class="col-md-8">
+			<div class="search">
+				<i class="fa fa-search"></i>
+				<input type="text" class="form-control" placeholder="Pesquisar vagas...">
+				<button class="btn btn-primary">Buscar</button>
+			</div>
 		</div>
 	</div>
 </div>
+
 
 <div class="container-fluid jobs">
 	<div class="container">
