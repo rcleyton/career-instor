@@ -1,19 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <%= image_tag("logo.png") %>
-    </a>
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
+<%= render "shared/nav" %>
 
 <div class="container-fluid bg-hero align-middle">
   <div class="container col-xxl-8 px-4 py-5">
@@ -42,7 +27,6 @@
 		</div>
 	</div>
 </div>
-
 
 <div class="container-fluid jobs">
 	<div class="container" id="vacancy">
