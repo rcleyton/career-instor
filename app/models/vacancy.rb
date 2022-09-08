@@ -1,7 +1,10 @@
 class Vacancy < ApplicationRecord
   validates :title, :vacancy_level, :description, :requirements, :desired_skills,
             :salary_range, :benefits, :vacancy_location, :work_model, :working_day, 
-            presence: true
+            :field, presence: true
+
+  WORK_MODEL = %i[ Presencial Remoto ]
+  VACANCY_LEVEL =  %i[ Estagiário Trainee Assistente Júnior Pleno Senior Coordenador Gerente ]
 
   before_create :vacancy_code
 

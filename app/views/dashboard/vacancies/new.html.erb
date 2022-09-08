@@ -20,10 +20,11 @@
               radio_buttons: :horizontal_collection,
               range:         :horizontal_range,
               time:          :horizontal_multi_select,
-              select:        :horizontal_select,
+              select:        :horizontal_select
             } do |f| %>
             <%= f.error_notification %>
             <%= f.input :title %>
+            <%= f.input :field %>
             <%= f.input :vacancy_level %>
             <%= f.input :description %>
             <%= f.input :requirements %>
@@ -31,7 +32,7 @@
             <%= f.input :salary_range %>
             <%= f.input :benefits %>
             <%= f.input :vacancy_location %>
-            <%= f.input :work_model %>
+            <%= f.input :work_model, as: :radio_buttons, collection: Vacancy::WORK_MODEL, wrapper: :horizontal_collection_inline %>
             <%= f.input :working_day %>
 
             <div class="ln_solid"></div>

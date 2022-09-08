@@ -3,10 +3,6 @@
 }
 
 .bg-hero {
-  // background-image: url('career.jpg');
-  // background-repeat: no-repeat;
-  // background-position: top;
-  // background-size: cover;
   background: rgb(21,115,71);
   background: linear-gradient(0deg, rgba(21,115,71,1) 21%, rgba(131,186,48,1) 100%);
 }
@@ -15,41 +11,6 @@
   border: none;
   border-radius: 10px;
   background-color: #eee;
-}
-
-.c-details span {
-  font-weight: 300;
-  font-size: 13px
-}
-
-.badge span {
-  background-color: #83BA30;
-  width: 80px;
-  height: 25px;
-  padding-bottom: 1px;
-  border-radius: 5px;
-  display: flex;
-  color: #fff;
-  justify-content: center;
-  align-items: center
-}
-
-.progress {
-  height: 10px;
-  border-radius: 10px
-}
-
-.progress div {
-  background-color: red
-}
-
-.text1 {
-  font-size: 14px;
-  font-weight: 600
-}
-
-.text2 {
-  color: #a5aec0
 }
 
 .search {
@@ -89,7 +50,7 @@ footer {
 
 .search input:focus {
   box-shadow: none;
-  border: 2px solid blue;
+  border: 2px solid #83BA30;
 }
 
 .search .fa-search {
@@ -108,7 +69,9 @@ footer {
 }
 
 .btn-hero {
-  background: blue;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 25px;
 }
 
 .feature-icon {
@@ -148,6 +111,19 @@ footer {
   height: 3rem;
 }
 
+/* Style card job */
 .date-pub {
   font-size: 0.8rem;
+}
+
+.job-code {
+  font-size: 1rem;
+}
+
+.job-date {
+  font-size: 0.7rem;
+}
+
+.job-bg {
+  background: #83BA30;
 }
