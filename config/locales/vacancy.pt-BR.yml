@@ -6,6 +6,7 @@ pt-BR:
     attributes:
       vacancy:
         title: Título
+        field: Área
         description: Descrição
         requirements: Requisitos
         desired_skills: Habilidades desejadas

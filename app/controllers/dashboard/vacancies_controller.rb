@@ -42,6 +42,7 @@ class Dashboard::VacanciesController < DashboardController
   private
   def vacancies_params
     params.require(:vacancy).permit(:title, :vacancy_level, :description, :requirements,
-    :desired_skills, :salary_range, :benefits, :vacancy_location, :work_model, :working_day, :code)
+    :desired_skills, :salary_range, :benefits, :vacancy_location, :work_model, :working_day, 
+    :field, :code)
   end
 end
