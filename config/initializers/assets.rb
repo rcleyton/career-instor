@@ -14,6 +14,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( dashboard.js dashboard.css
                                                   authentication.js authentication.css home.css home.js )
 
-Rails.application.config.assets.precompile += %w( custom.js custom.css main.css nav-bg.js instor.png boot.png logo.png )
+Rails.application.config.assets.precompile += %w( custom.js custom.css main.css nav-bg.js instor.png boot.png logo.png h-logo.png )
 
 Rails.application.config.assets.precompile += %w( jquery-2.2.3/dist/jquery.js )
