@@ -21,16 +21,6 @@
   padding: 5rem 0;
 }
 
-.foot {
-  background-color: #151515;
-}
-
-footer {
-  margin-top: 5rem;
-  padding: 3rem 0;
-
-}
-
 .height {
   height: 20vh;
 }
@@ -130,6 +120,7 @@ footer {
 .pagination {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .pagination > a,
@@ -143,4 +134,27 @@ footer {
   background-color: var(--bs-pagination-bg);
   border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+// footer
+.foot {
+  background-color: #151515;
+  color: white;
+}
+
+.f-ul {
+  padding-bottom: 2rem;
+}
+
+.f-li {
+  list-style: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  img {
+    margin-bottom: 3rem;
+  }
+  .t-footer {
+    text-align: center;
+  }
 }
