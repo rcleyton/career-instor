@@ -7,14 +7,15 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'jbuilder', '~> 2.5'
-gem 'will_paginate', '~> 3.3', '>= 3.3.1'
-gem 'will_paginate-bootstrap'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.3'
+gem 'ransack'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form'
 gem 'uglifier', '>= 1.3.0'
+gem 'will_paginate-bootstrap'
+gem 'will_paginate', '~> 3.3', '>= 3.3.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

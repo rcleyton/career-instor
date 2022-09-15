@@ -31,13 +31,19 @@
   box-shadow: 0 0 40px rgba(51, 51, 51, .1);
 }
 
-.search input {
+.search
+input,
+select {
   height: 60px;
   border: 2px solid #d6d4d4;
 }
 
-
 .search input:focus {
+  box-shadow: none;
+  border: 2px solid #83BA30;
+}
+
+.search select:focus {
   box-shadow: none;
   border: 2px solid #83BA30;
 }
@@ -69,13 +75,14 @@
   border-radius: .75rem;
 }
 
-.icon-link > .bi {
+.icon-link>.bi {
   margin-top: .125rem;
   margin-left: .125rem;
   fill: currentcolor;
   transition: transform .25s ease-in-out;
 }
-.icon-link:hover > .bi {
+
+.icon-link:hover>.bi {
   transform: translate(.25rem);
 }
 
@@ -85,9 +92,17 @@
   border-radius: .75rem;
 }
 
-.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
-.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
-.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+.text-shadow-1 {
+  text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25);
+}
+
+.text-shadow-2 {
+  text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25);
+}
+
+.text-shadow-3 {
+  text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25);
+}
 
 .card-cover {
   background-repeat: no-repeat;
@@ -123,7 +138,7 @@
   margin-bottom: 2rem;
 }
 
-.pagination > a,
+.pagination>a,
 .current,
 .next_page,
 .previous_page {
@@ -133,7 +148,7 @@
   text-decoration: none;
   background-color: var(--bs-pagination-bg);
   border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 // footer
@@ -143,10 +158,11 @@
   color: #fff;
 }
 
-.credit > span {
- font-weight: bolder;
+.credit>span {
+  font-weight: bolder;
 }
-.credit > a {
+
+.credit>a {
   color: #eee;
   font-weight: bolder;
 }

@@ -123,6 +123,10 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
     rake (13.0.6)
+    ransack (2.4.1)
+      activerecord (>= 5.2.4)
+      activesupport (>= 5.2.4)
+      i18n
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -189,6 +193,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.3)
+  ransack
   sass-rails (~> 5.0)
   simple_form
   spring
@@ -203,4 +208,4 @@ RUBY VERSION
    ruby 2.4.10p364
 
 BUNDLED WITH
-   2.3.21
+   2.3.22

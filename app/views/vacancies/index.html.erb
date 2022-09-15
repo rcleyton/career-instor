@@ -1,12 +1,15 @@
-<%= render 'shared/nav'%>
+<%= render "shared/nav" %>
 
 <div class="container-fluid bg-hero align-middle">
   <div class="container col-xxl-8 px-4 py-5">
 		<div class="text-center">
-			<%= image_tag "logo.png", class: "d-block mx-auto mb-4" %>
 			<h1 class="display-5 fw-bold text-white">Carreiras Instor</h1>
 			<div class="col-lg-6 mx-auto">
-				<p class="lead mb-4 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet sapien a libero vestibulum dapibus. Sed convallis neque eget sapien porta, eget fermentum tortor gravida. Aliquam at justo ac diam consequat congue. Cras eu ante non odio posuere condimentum. In molestie blandit consectetur.</p>
+				<p class="lead mb-4 text-white">
+					A Instor te convida a fazer parte de uma das equipes mais revolucionárias do mercado. 
+					Somar, compartilhar e contribuir para que os nossos resultados sejam ainda maiores, 
+					é o que buscamos. Venha fazer parte.
+				</p>
 				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
 					<a href="#vacancy" class="btn btn-primary btn-lg px-4 gap-3 btn-hero">Ver Vagas</a>
 				</div>
@@ -15,22 +18,21 @@
   </div>
 </div>
 
-<div class="container ">
-	<%= form_with url: search_path, local: true, method: :get do %>
-		<div class="row height d-flex justify-content-center align-items-center">
-			<div class="col-md-8">
-				<div class="search">
-				<i class="fa fa-search"></i>
-					<%= text_field_tag :q, nil, placeholder: "Pesquisar...", class: "form-control" %>
-					<%= submit_tag "Buscar", class: "btn btn-primary bt-submit" %>
-				</div>
+<div class="container">
+	<div class="row height d-flex justify-content-center align-items-center">
+		<div class="col-md-8">
+			<div class="search">
+			<%= search_form_for @q do |f| %>
+				<%= f.collection_select :title_eq, Vacancy.all, :title, :title, {include_blank: 'Buscar por...'}, class: "form-control" %>
+				<%= f.submit "Buscar", class: "btn btn-primary bt-submit" %>
+			<% end %>
 			</div>
 		</div>
-	<% end %>
+	</div>
 </div>
 
 <div class="container p-3" id="vacancy">
-	<% @vacancies.each do |v| %>	
+	<% @vacancy.each do |v| %>	
     <div class="col-12 col-md-8 mx-auto">
       <div class="card mb-3">
         <div class="card-body">
@@ -45,11 +47,11 @@
           <p class="card-text">
             <%= v.vacancy_location %>
           </p>
-          <%= link_to "Aplicar", home_path(v), class: "btn btn-success" %>
+          <%= link_to "Aplicar", vacancy_path(v), class: "btn btn-success" %>
         </div>
       </div>
     </div>
 	<% end %>
 </div>
 
-<%= render 'shared/footer' %>
+<%= render "shared/footer" %>
