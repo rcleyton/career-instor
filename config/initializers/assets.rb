@@ -18,6 +18,8 @@ Rails.application.config.assets.precompile += %w( dashboard.js dashboard.css
 Rails.application.config.assets.precompile += %w( custom.js custom.css 
                                                   main.css nav-bg.js 
                                                   instor.png boot.png 
-                                                  logo.png h-logo.png )
+                                                  logo.png h-logo.png 
+                                                  hero.png footer.png 
+                                                  instor-logo.png )
 
 Rails.application.config.assets.precompile += %w( jquery-2.2.3/dist/jquery.js )
