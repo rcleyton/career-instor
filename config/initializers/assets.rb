@@ -20,6 +20,7 @@ Rails.application.config.assets.precompile += %w( custom.js custom.css
                                                   instor.png boot.png 
                                                   logo.png h-logo.png 
                                                   hero.png footer.png 
-                                                  instor-logo.png )
+                                                  instor-logo.png email.png
+                                                  linkedin.png skype.png)
 
 Rails.application.config.assets.precompile += %w( jquery-2.2.3/dist/jquery.js )
