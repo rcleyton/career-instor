@@ -61,11 +61,12 @@
 
 <main>
   <div class="container px-4 py-5">
-    <h2 class="pb-2 border-bottom"><%= @vacancy.code %> - <%= @vacancy.title %></h2>
-    <p class="text-muted date-pub">Publicado em <%= l @vacancy.created_at, format: :long %></p>
-
-    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-2">
       <div class="d-flex flex-column align-items-start gap-2">
+
+        <h2 class="pb-2 border-bottom" style="width:100%"><%= @vacancy.code %> - <%= @vacancy.title %></h2>
+        <p class="text-muted date-pub pb-5">Publicado em <%= l @vacancy.created_at, format: :long %></p>
+
         <h4 class="fw-bold">Descrição da vaga</h3>
         <p class="text-muted"><%= @vacancy.description %></p>
 
@@ -88,7 +89,7 @@
       <div class="row row-cols-1 row-cols-sm-2 g-4">
         <div class="d-flex flex-column gap-2">
           <div
-            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-4 rounded-3">
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center mdt fs-4 rounded-3">
             <svg class="bi" width="1em" height="1em">
               <use xlink:href="#collection" />
             </svg>
@@ -99,7 +100,7 @@
 
         <div class="d-flex flex-column gap-2">
           <div
-            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-4 rounded-3">
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center mdt fs-4 rounded-3">
             <svg class="bi" width="1em" height="1em">
               <use xlink:href="#gear-fill" />
             </svg>
@@ -110,7 +111,7 @@
 
         <div class="d-flex flex-column gap-2">
           <div
-            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-4 rounded-3">
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center mdt fs-4 rounded-3">
             <svg class="bi" width="1em" height="1em">
               <use xlink:href="#speedometer" />
             </svg>
@@ -121,7 +122,7 @@
 
         <div class="d-flex flex-column gap-2">
           <div
-            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-4 rounded-3">
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center mdt fs-4 rounded-3">
             <svg class="bi" width="1em" height="1em">
               <use xlink:href="#table" />
             </svg>
@@ -136,10 +137,10 @@
 
   <div class="container-fluid" style="background:#83BA30">
     <div class="container px-4 py-5 text-light">
-        <h3>Candidatura</h3>
-        <p>Para se candidatar, envie um email para rh@instor.com.br, com o código da vaga,
-        nome da vaga e currículo anexo.</p> 
-        <p>Muito em breve retornameros o contato. Boa sorte!</p>
+        <h1 class="display-5 fw-bold text-white pb-3">Candidatura</h1>
+        <p class="candidature">Para se candidatar, é muito simples. Basta enviar um e-mail para <span>rh@instor.com.br</span>, 
+           com o código da vaga, nome da vaga e currículo anexo.</p> 
+        <p class="candidature">Muito em breve retornaremos o contato. <span>Boa sorte!</span></p>
     </div>
   </div>
 </main>
