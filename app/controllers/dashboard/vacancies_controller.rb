@@ -14,8 +14,10 @@ class Dashboard::VacanciesController < DashboardController
   def create
     @vacancy = Vacancy.create(vacancies_params)
     if @vacancy.save
+      flash['notice'] = 'Vaga criada com sucesso' 
       redirect_to dashboard_vacancy_path(@vacancy)
     else
+      flash.now['alert'] = 'Verifique os campos em vermelho'
       render :new
     end
   end
@@ -27,8 +29,10 @@ class Dashboard::VacanciesController < DashboardController
   def update
     @vacancy = Vacancy.find(params[:id])
     if @vacancy.update(vacancies_params)
+      flash['notice'] = 'Vaga editada com sucesso' 
       redirect_to dashboard_vacancy_path(@vacancy)
     else 
+      flash.now['alert'] = 'Verifique os campos em vermelho'
       render :edit
     end
   end
@@ -36,6 +40,7 @@ class Dashboard::VacanciesController < DashboardController
   def destroy
     @vacancy = Vacancy.find(params[:id])
     @vacancy.destroy
+    flash['notice'] = 'Vaga deletada com sucesso' 
     redirect_to dashboard_home_index_path
   end
 

@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag    'authentication' %>
   </head>
 
-  <body class="text-center">
+  <body data-flash-messages="<%= JSON.dump(flash.to_a) %>" class="text-center">
     <%= yield %>
 
     <%= javascript_include_tag 'authentication' %>

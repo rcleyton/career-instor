@@ -1,10 +1,6 @@
-// //= require jquery/dist/jquery.js
-
-// $(window).on("load", function() {
-//    $( "#q_title_eq" ).select2();
-//    }
-// );
-
+//= require jquery-2.2.3/dist/jquery
+//= require bootstrap/dist/js/bootstrap
+//= require custom
 //= require toastify-js/src/toastify.js
 
 document.addEventListener('DOMContentLoaded', () => {
