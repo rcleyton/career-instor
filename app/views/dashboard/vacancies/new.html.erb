@@ -6,25 +6,26 @@
       </div>
       <div class="panel-body">
         <%= simple_form_for @vacancy, url: dashboard_vacancies_path do |f| %>
-          <%= f.input :title %>
-          <%= f.input :field %>
-          <%= f.input :vacancy_level %>
-          <%= f.input :description %>
-          <%= f.input :requirements %>
-          <%= f.input :desired_skills %>
-          <%= f.input :salary_range %>
-          <%= f.input :benefits %>
-          <%= f.input :vacancy_location %>
-          <%= f.input :work_model, as: :radio_buttons, collection: Vacancy::WORK_MODEL, class: "my_class" %>
-          <%= f.input :working_day %>
+            <%= f.error_notification %>
+            <%= f.input :title %>
+            <%= f.input :field %>
+            <%= f.input :vacancy_level %>
+            <%= f.input :description %>
+            <%= f.input :requirements %>
+            <%= f.input :desired_skills %>
+            <%= f.input :salary_range %>
+            <%= f.input :benefits %>
+            <%= f.input :vacancy_location %>
+            <%= f.input :work_model, as: :radio_buttons, collection: Vacancy::WORK_MODEL, class: "my_class" %>
+            <%= f.input :working_day %>
 
-          <div class="ln_solid"></div>
-          <div class="form-group">
-            <div class="col">
-              <%= f.button :submit, class:"btn btn-success" %>
-              <%= link_to "Cancelar", dashboard_home_index_path, class:"btn btn-warning" %>
+            <div class="ln_solid"></div>
+            <div class="form-group">
+              <div class="col">
+                <%= f.button :submit, class:"btn btn-success" %>
+                <%= link_to "Cancelar", dashboard_home_index_path, class:"btn btn-warning" %>
+              </div>
             </div>
-          </div>
         <% end %>
       </div>
     </div>

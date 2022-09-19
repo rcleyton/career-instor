@@ -1,4 +1,4 @@
-//= require toastify-js/src/toastify.js
+import Toastify from "toastify-js";
 
 document.addEventListener('DOMContentLoaded', () => {
   const backgroundcolors = {
