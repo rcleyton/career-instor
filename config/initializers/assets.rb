@@ -21,6 +21,7 @@ Rails.application.config.assets.precompile += %w( custom.js custom.css
                                                   logo.png h-logo.png 
                                                   hero.png footer.png 
                                                   instor-logo.png email.png
-                                                  linkedin.png skype.png)
+                                                  linkedin.png skype.png
+                                                  video.mp4 )
 
 Rails.application.config.assets.precompile += %w( jquery-2.2.3/dist/jquery.js )

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light">
-  <div class="container">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag("logo.png") %>
+  <div class="container py-1">
+    <%= link_to root_path, class: "navbar-brand mb-1" do %>
+      <%= image_tag "logo.png" %>
     <% end %>
 
     <% if user_signed_in? %>
