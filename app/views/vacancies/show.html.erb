@@ -63,7 +63,15 @@
   <div class="container px-4 py-5">
     <div class="row row-cols-1 row-cols-xl-2 align-items-md-center g-5 py-2">
       <div class="d-flex flex-column align-items-start gap-2">
-        <h2 class="pb-2 border-bottom" style="width:100%"><%= @vacancy.code %> - <%= @vacancy.title %></h2>
+
+        <div class="container border-bottom px-0 py-2 d-flex justify-content-between align-items-center">  
+          <div>
+            <h2 class="m-0"><%= @vacancy.code %> - <%= @vacancy.title %></h2>
+          </div>
+          <div>
+            <button class="btn btn-success btn-sm">Copiar</button>
+          </div>      
+        </div>
         <p class="text-muted date-pub pb-5">Publicado em <%= l @vacancy.created_at, format: :long %></p>
 
         <h4 class="fw-bold">Descrição da vaga</h3>
