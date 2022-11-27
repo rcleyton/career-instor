@@ -16,6 +16,4 @@ test:
 
 production:
   <<: *default
-  database: career-instor_production
-  username: career-instor
-  password: <%= ENV['CAREER-INSTOR_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
