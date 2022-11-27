@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root "vacancies#index"
   
   resources :vacancies, only: %i[index show]
